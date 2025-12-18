@@ -41,7 +41,7 @@ Since this project uses a manual dependency setup (no Maven/Gradle required for 
 mkdir bin -Force
 
 # Compile sources
-javac -cp "lib/sqlite-jdbc.jar" -d bin src/main/java/com/f1search/config/*.java src/main/java/com/f1search/model/*.java src/main/java/com/f1search/dao/*.java src/main/java/com/f1search/service/*.java src/main/java/com/f1search/util/*.java src/main/java/com/f1search/web/*.java src/main/java/com/f1search/Main.java
+javac -cp "lib/sqlite-jdbc.jar;lib/gson-2.10.1.jar" -d bin src/main/java/com/f1search/config/*.java src/main/java/com/f1search/model/*.java src/main/java/com/f1search/dao/*.java src/main/java/com/f1search/service/*.java src/main/java/com/f1search/util/*.java src/main/java/com/f1search/web/*.java src/main/java/com/f1search/Main.java
 
 # Copy resources
 Copy-Item src/main/resources/schema.sql bin/schema.sql
@@ -54,7 +54,7 @@ Copy-Item -Recurse -Force src/main/resources/web bin/
 Starts the web server on port 8080.
 
 ```powershell
-java -cp "bin;lib/sqlite-jdbc.jar" com.f1search.Main
+java -cp "bin;lib/sqlite-jdbc.jar;lib/gson-2.10.1.jar" com.f1search.Main
 ```
 
 - Open your browser to: **[http://localhost:8080](http://localhost:8080)**
@@ -63,7 +63,7 @@ java -cp "bin;lib/sqlite-jdbc.jar" com.f1search.Main
 Run a quick search directly from the terminal.
 
 ```powershell
-java -cp "bin;lib/sqlite-jdbc.jar" com.f1search.Main "Hamilton"
+java -cp "bin;lib/sqlite-jdbc.jar;lib/gson-2.10.1.jar" com.f1search.Main "Hamilton"
 ```
 
 ## 📂 Project Structure
