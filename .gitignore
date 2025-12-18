@@ -1,0 +1,17 @@
+# Build output
+bin/
+target/
+*.class
+
+# IDE files
+.idea/
+.vscode/
+*.iml
+*.swp
+
+# Database (generated at runtime)
+f1_history.db
+
+# OS generated
+.DS_Store
+Thumbs.db

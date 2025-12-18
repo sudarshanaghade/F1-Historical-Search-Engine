@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F1 Historical Archives</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="background-overlay"></div>
+
+    <div class="container">
+        <header>
+            <h1>Formula 1 <span class="accent">Archives</span></h1>
+            <p>Explore the history of speed. Search drivers and constructors.</p>
+        </header>
+
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search (e.g., 'Hamilton', 'Ferrari')..."
+                autocomplete="off">
+            <button id="searchBtn" onclick="search()">Search</button>
+        </div>
+
+        <div id="loading" class="hidden">Searching records...</div>
+
+        <div id="results" class="results-grid">
+            <!-- Results will appear here -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
